@@ -1,19 +1,17 @@
-import SharePost from "@/components/Blog/SharePost";
-import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
-
 import { Metadata } from "next";
-import NewsLatterBox from "@/components/Contact/NewsLatterBox";
+import GetDocumentBox from "@/components/Products/GetDocumentBox";
+import RootLayout from "@/app/defaultLayout/layout";
 
 export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
+  title: "Product Details",
+  // description: "This is Blog Details Page for Startup Nextjs Template",
   // other metadata
 };
 
 const BlogDetailsPage = () => {
   return (
-    <>
+    <RootLayout>
       <section className="pb-8 pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
@@ -90,12 +88,12 @@ const BlogDetailsPage = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-              <NewsLatterBox />
+              <GetDocumentBox />
             </div>
           </div>
         </div>
       </section>
-    </>
+    </RootLayout>
   );
 };
 

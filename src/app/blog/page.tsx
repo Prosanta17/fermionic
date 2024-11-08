@@ -1,24 +1,24 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
+import RootLayout from "@/app/defaultLayout/layout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
+  title: "Blogs",
+  // description: "This is Blog Page for Startup Nextjs Template",
   // other metadata
 };
 
 const Blog = () => {
   return (
-    <>
+    <RootLayout>
       <Breadcrumb
         pageName="Blogs"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
 
-      <section className="pb-[120px] pt-[120px]">
+      <section className="pb-[60px] pt-[60px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             {blogData.map((blog) => (
@@ -92,7 +92,7 @@ const Blog = () => {
           </div>
         </div>
       </section>
-    </>
+    </RootLayout>
   );
 };
 

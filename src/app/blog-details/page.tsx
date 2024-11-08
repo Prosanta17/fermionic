@@ -1,18 +1,17 @@
-import SharePost from "@/components/Blog/SharePost";
-import TagButton from "@/components/Blog/TagButton";
+import RootLayout from "@/app/defaultLayout/layout";
 import Image from "next/image";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
+  title: "Blog Details Page",
+  // description: "This is Blog Details Page for Startup Nextjs Template",
   // other metadata
 };
 
 const BlogDetailsPage = () => {
   return (
-    <>
+    <RootLayout>
       <section className="pb-[120px] pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
@@ -25,15 +24,6 @@ const BlogDetailsPage = () => {
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
-                      <div className="mr-4">
-                        <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                          <Image
-                            src="/images/blog/author-02.png"
-                            alt="author"
-                            fill
-                          />
-                        </div>
-                      </div>
                       <div className="w-full">
                         <span className="mb-1 text-base font-medium text-body-color">
                           By <span>Musharof Chy</span>
@@ -62,7 +52,7 @@ const BlogDetailsPage = () => {
                         </span>
                         12 Jan 2024
                       </p>
-                      <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                      {/* <p className="mr-5 flex items-center text-base font-medium text-body-color">
                         <span className="mr-3">
                           <svg
                             width="18"
@@ -90,17 +80,17 @@ const BlogDetailsPage = () => {
                           </svg>
                         </span>
                         35
-                      </p>
+                      </p> */}
                     </div>
                   </div>
-                  <div className="mb-5">
+                  {/* <div className="mb-5">
                     <a
                       href="#0"
                       className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
                     >
                       Design
                     </a>
-                  </div>
+                  </div> */}
                 </div>
                 <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
@@ -161,7 +151,7 @@ const BlogDetailsPage = () => {
                       Ligula ullamcorper malesuada proin
                     </li>
                   </ul>
-                  <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
+                  {/* <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod incididunt utionals labore et dolore magna
@@ -308,13 +298,13 @@ const BlogDetailsPage = () => {
                         </defs>
                       </svg>
                     </span>
-                  </div>
+                  </div> */}
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     consectetur adipiscing elit in voluptate velit esse cillum
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                     mattis vulputate cupidatat.
                   </p>
-                  <div className="items-center justify-between sm:flex">
+                  {/* <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h4 className="mb-3 text-sm font-medium text-body-color">
                         Popular Tags :
@@ -333,14 +323,14 @@ const BlogDetailsPage = () => {
                         <SharePost />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>
+    </RootLayout>
   );
 };
 
