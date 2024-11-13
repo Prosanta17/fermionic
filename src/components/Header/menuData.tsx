@@ -90,8 +90,8 @@ const menuData: Menu[] = [
   },
   {
     id: 5,
-    title: "Blog",
-    path: "/blog",
+    title: "Blogs",
+    path: "/blogs",
     newTab: false,
   },
   {
