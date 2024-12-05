@@ -32,7 +32,7 @@ const Products = () => {
 
   return (
     <>
-      <section id="Products" className="py-6 lg:py-10">
+      <section id="Products" className="py-6 lg:py-10 min-h-96">
         <div className="container">
           {currentPath === "/" && (
             <SectionTitle
@@ -43,13 +43,15 @@ const Products = () => {
           )}
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {products.map((product, index) => (
-              <SingleProduct
-                key={product.id}
-                product={product}
-                icon={productsData[index].icon}
-              />
-            ))}
+            {products
+              .filter((product) => product.isFeatured)
+              .map((product, index) => (
+                <SingleProduct
+                  key={product._id}
+                  product={product}
+                  icon={productsData[index].icon}
+                />
+              ))}
           </div>
           <ViewMore />
         </div>
